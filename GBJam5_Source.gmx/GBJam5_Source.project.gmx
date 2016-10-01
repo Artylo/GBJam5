@@ -5,9 +5,43 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
-  <backgrounds name="background"/>
+  <sprites name="sprites">
+    <sprite>sprites\s_character_idle</sprite>
+    <sprite>sprites\s_block</sprite>
+    <sprite>sprites\s_character_walking</sprite>
+    <sprite>sprites\s_dust</sprite>
+  </sprites>
+  <backgrounds name="background">
+    <background>background\bg_block</background>
+  </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <scripts name="Director">
+      <script>scripts\script_director_draw_setColour.gml</script>
+      <script>scripts\script_director_draw_debug.gml</script>
+      <script>scripts\director_commands.gml</script>
+      <script>scripts\director_create.gml</script>
+      <script>scripts\director_step.gml</script>
+      <script>scripts\director_draw.gml</script>
+    </scripts>
+    <scripts name="Character">
+      <script>scripts\script_character_create_variables.gml</script>
+      <script>scripts\script_character_step_movement.gml</script>
+    </scripts>
+    <scripts name="Room">
+      <script>scripts\init_room_game.gml</script>
+    </scripts>
+    <scripts name="Misc">
+      <script>scripts\script_misc_dust_create.gml</script>
+      <script>scripts\script_misc_dust_step.gml</script>
+    </scripts>
+  </scripts>
+  <objects name="objects">
+    <object>objects\character</object>
+    <object>objects\block</object>
+    <object>objects\director</object>
+    <object>objects\dust</object>
+  </objects>
   <rooms name="rooms">
     <room>rooms\game</room>
   </rooms>
