@@ -32,3 +32,21 @@ else
 }
 
 background_x[1] -= 0.5;
+
+//Sliding Camera
+var xTo, yTo;
+if(instance_exists(character))
+{
+    xTo = (character.x div view_wview) * view_wview;
+    yTo = (character.y div view_hview) * view_hview;
+    
+    var difX, difY;
+    difX = (xTo - camX);
+    difY = (yTo - camY);
+    if(abs(difX) < 1) camX = xTo;
+    else camX += difX/15;
+    if(abs(difY) < 1) camY = yTo;
+    else camY += difY/15;
+}
+view_xview = camX;
+view_yview = camY;
