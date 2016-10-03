@@ -27,8 +27,24 @@ if(place_meeting(x,y+1,block))
     }
     jumps = 2;
 }
-
-
+if(place_meeting(x+hsp, y, block))
+{
+    
+    while(!place_meeting(x+sign(hsp), y, block))
+    {
+        x+= sign(hsp);
+    }
+    hsp = 0;
+}
+if(place_meeting(x, y+vsp, block))
+{
+    
+    while(!place_meeting(x, y+sign(vsp), block))
+    {
+        y += sign(vsp);
+    }
+    vsp = 0;
+}
 if(place_meeting(x+hsp, y+vsp, block))
 {
     

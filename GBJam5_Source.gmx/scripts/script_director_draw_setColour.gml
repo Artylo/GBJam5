@@ -15,14 +15,14 @@ draw_set_colour(global.palette);
 
 if(keyboard_check_pressed(ord("P")))
 {
-    var r, g, b;
-    r = irandom(255);
-    g = irandom(255);
-    b = irandom(255);
-    global.palette = make_colour_rgb(r,g,b);
+    var h,s,v;
+    h = irandom(255);
+    s = 255;
+    v = 60;
+    global.palette = make_colour_hsv(h,s,v);
 }
 
-draw_set_blend_mode_ext(bm_dest_color,bm_zero);
+draw_set_blend_mode_ext(bm_dest_color,bm_one);
 draw_rectangle_colour(0,0,window_get_width(),window_get_height(),global.palette,global.palette,global.palette,global.palette,false);
 draw_set_blend_mode(bm_normal);
 

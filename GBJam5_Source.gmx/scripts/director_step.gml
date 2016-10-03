@@ -12,12 +12,9 @@ if (surface_exists(surf))
     
     with (character)
         draw_circle(x + random_range(-1, 1), y + random_range(-1, 1), 30 + random_range(-1, 1), false);
-    
-       /*        
-    with (oParticleLantern)
-        if (image_xscale > 0.25)
-            draw_circle(x + random_range(-1, 1), y + random_range(-1, 1), 2 + random_range(-1, 1), false);
-    */
+          
+    with (light)
+        draw_circle(lightX + random_range(-1, 1),lightY + random_range(-1, 1), 15 + random_range(-1, 1), false);
     
     draw_set_blend_mode(bm_normal);
     draw_set_alpha(1);

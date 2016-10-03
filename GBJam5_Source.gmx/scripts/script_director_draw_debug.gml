@@ -8,9 +8,12 @@ debug[0] = "[DEBUG]";
 debug[1] = "global.palette: " + string(global.palette);
 debug[3] = "FPS: " + string(fps_real);
 
-for(var i = 0; i < array_length_1d(debug); ++i)
+if(keyboard_check(vk_control))
 {
-    draw_text(16,16*i,debug[i]);
+    for(var i = 0; i < array_length_1d(debug); ++i)
+    {
+        draw_text(16,16*i,debug[i]);
+    }
 }
 
 draw_set_colour(global.palette);

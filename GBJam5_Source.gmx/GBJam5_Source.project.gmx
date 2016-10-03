@@ -10,6 +10,7 @@
     <sprite>sprites\s_block</sprite>
     <sprite>sprites\s_character_walking</sprite>
     <sprite>sprites\s_dust</sprite>
+    <sprite>sprites\s_light</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_block</background>
@@ -34,6 +35,8 @@
     <scripts name="Misc">
       <script>scripts\script_misc_dust_create.gml</script>
       <script>scripts\script_misc_dust_step.gml</script>
+      <script>scripts\script_misc_light_create.gml</script>
+      <script>scripts\script_misc_light_step.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">
@@ -41,6 +44,7 @@
     <object>objects\block</object>
     <object>objects\director</object>
     <object>objects\dust</object>
+    <object>objects\light</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\game</room>

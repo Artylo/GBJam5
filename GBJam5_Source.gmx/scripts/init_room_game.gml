@@ -14,6 +14,6 @@ view_wview = global.gameWidth;
 view_hview = global.gameHeight;
 display_set_gui_size(global.gameWidth,global.gameHeight);
 
-global.palette = c_white;
+global.palette = make_colour_rgb(139,172,15);
 instance_create(0,0,director);
 
